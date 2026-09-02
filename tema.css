@@ -1,0 +1,34 @@
+/* ============================================================
+   TEMA — A Grande Expedição (Divisão · 5º ano)
+   Identidade + CONTRASTE sobre o fundo verde da floresta.
+   A banca (contraste_fundo) mede o PIXEL real atrás do texto:
+   números e rótulos das peças caíam sobre o verde escurecido.
+   Aqui o texto que fica sobre o fundo vira CLARO (com sombra) e
+   os rótulos de mensagem ganham pílula escura. Os botões: verde
+   principal = letra branca; amarelo/bege = letra escura.
+   (tema.css entra por último no montar: ganha do motor e das peças.)
+   ============================================================ */
+
+/* fundo do jogo calmo (o motor borra+escurece com fundoSuave) */
+#bg.suave{-webkit-filter:blur(7px) brightness(.5);filter:blur(7px) brightness(.5)}
+
+/* --- RETA NUMÉRICA: painel opaco (números claros leem sobre ele) --- */
+.mec-reta-numerica .reta{background:rgba(22,34,18,.90)!important;border-color:rgba(255,255,255,.42)!important}
+.mec-reta-numerica .rtick{background:rgba(255,255,255,.7)!important}
+.mec-reta-numerica .rlinha{background:#f6f2e8!important}
+
+/* --- números/totais das peças sobre o fundo escurecido -> CLAROS --- */
+.numr,.rnum,.ptot{color:#fff!important;
+  text-shadow:0 1px 3px #000,0 0 3px rgba(0,0,0,.85)}
+
+/* --- base-dez: rótulos e a mensagem da prateleira (span sem classe) --- */
+.mec-base-dez .cxrot,.mec-base-dez .mrot{
+  color:#fff!important;background:rgba(16,24,12,.82);
+  border-radius:9px;padding:2px 9px;text-shadow:none}
+.mec-base-dez .prat{color:#fff!important;text-shadow:0 1px 3px #000,0 0 3px rgba(0,0,0,.85)}
+
+/* --- botões: '+pôr'/'−tirar'/'não dá mais' (amarelo/bege) = letra escura, em TODA peça --- */
+.btn.mais,.btn.menos,.btn.off,.btn.fraco{color:#33280a!important}
+/* --- botão principal verde (Contar comigo) = letra branca --- */
+.mec-contadores .btn{color:#fff!important}
+.mec-contadores .btn.mais,.mec-contadores .btn.menos,.mec-contadores .btn.off{color:#33280a!important}
